@@ -10,15 +10,21 @@ public class IntrodAlbum {
     public void IntroducirAlbum(){
         System.out.println("Cuantos Albumes desea Ingresar");
         int h = lt.LecturaEntero();
-        System.out.println("Ingrese el Nombre del Album");
-        String setNombreAlbum = sc.next();
-        System.out.println("Ingrese el Nombre del Artista");
-        String setNombreArtista = sc.next();
-        System.out.println("Cuantas canciones son?");
-        int j = lt.LecturaEntero();
-        System.out.println("Introduzca las canciones");
-        String setNombreCancion = sc.next();
-        pda.add(new Album(setNombreAlbum,setNombreAlbum,setNombreCancion));
+        for (int i =0; i<h; i++) {
+            System.out.println("Ingrese el Nombre del Album");
+            String setNombreAlbum = lt.LeerCadena();
+            System.out.println("Cuantas canciones son?");
+            int j = lt.LecturaEntero();
+            System.out.println("Ingrese el Nombre del Artista");
+            String setNombreArtista = lt.LeerCadena();
+            for (int z = 0; z<h; z++) {
+                System.out.println("Introduzca las canciones");
+                String setNombreCancion = lt.LeerCadena();
+                pda.add(new Album(setNombreAlbum, setNombreAlbum, setNombreCancion));
+            }
+            System.out.println(setNombreAlbum);
+            System.out.println(setNombreArtista);
+        }
     }
     public void ImprimirAlbum(){
         System.out.println("El album Musical");

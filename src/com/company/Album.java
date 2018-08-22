@@ -50,4 +50,8 @@ public class Album {
         this.numCanciones = numCanciones;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Album "+NombreAlbum,"Artista: "+NombreArtista,"Canciones: %s"+ NombreCancion,"Cantidad de Canciones: "+numCanciones);
+    }
 }

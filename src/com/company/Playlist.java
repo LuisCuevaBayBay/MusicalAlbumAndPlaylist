@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.xml.datatype.Duration;
+
 public class Playlist {
     private String NombreCancion;
     private String Artista;
@@ -11,6 +13,9 @@ public class Playlist {
         this.Artista = Artista;
         this.duracion = duracion;
         this.cantidadCanciones = cantidadCanciones;
+    }
+
+    public Playlist(int i){
     }
 
     public String getNombreCancion() {
@@ -45,4 +50,8 @@ public class Playlist {
         this.cantidadCanciones = cantidadCanciones;
     }
 
+    @Override
+    public String toString() {
+        return String.format(NombreCancion, Artista, duracion);
+    }
 }

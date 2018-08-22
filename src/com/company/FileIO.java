@@ -5,9 +5,9 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 public class FileIO {
-    private String fileName = "products.csv";
+    private String fileName = "Data.csv";
 
-    public FileIO(String fileName){
+    public FileIO(String fileName) {
         this.fileName=fileName;
     }
     public list<Album> readAlbum() throws IOException{
