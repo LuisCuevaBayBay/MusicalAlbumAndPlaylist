@@ -53,5 +53,6 @@ public class IntrodAlbum {
             String setNombreCancion = lt.leeerLinea();
             pda.add(new Album(setNombreAlbum, setNombreArtista, setNombreCancion));
         }
+        System.out.println();
     }
 }
