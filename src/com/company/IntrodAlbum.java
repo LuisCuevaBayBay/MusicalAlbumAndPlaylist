@@ -15,13 +15,13 @@ public class IntrodAlbum {
         int h = lt.leerEntero("Ingresa la cantidad de albumes","intenta de nuevo");
         for (int i =0; i<h; i++) {
             System.out.println("Ingrese el Nombre del Album");
-            String setNombreAlbum = lt.leeerLinea();
+            String setNombreAlbum = sc.nextLine();
             System.out.println("Cuantas canciones son?");
             int j = lt.leerEntero("Favor ingresa cuantas canciones son","intenta de nuevo");
             System.out.println("Ingrese el Nombre del Artista");
-            String setNombreArtista = lt.leeerLinea();
+            String setNombreArtista = sc.nextLine();
             System.out.println("Ingrese las canciones");
-           String setNombreCancion = lt.leeerLinea();
+           String setNombreCancion = sc.nextLine();
             pda.add(new Album(setNombreAlbum, setNombreArtista, setNombreCancion));
         }
     }
@@ -46,11 +46,11 @@ public class IntrodAlbum {
             System.out.println("Que album desea modificar");
             int n = lt.leerEntero("Ingresa el album que quieras modificar","intenta de nuevo");
             System.out.println("Introduzca el nuevo nombre");
-            String setNombreAlbum = sc.next();
+            String setNombreAlbum = sc.nextLine();
             System.out.println("Introduzca el nuevo artista");
-            String setNombreArtista = sc.next();
+            String setNombreArtista = sc.nextLine();
             System.out.println("Introduzca las canciones");
-            String setNombreCancion = lt.leeerLinea();
+            String setNombreCancion = sc.nextLine();
             pda.add(new Album(setNombreAlbum, setNombreArtista, setNombreCancion));
         }
         System.out.println();
