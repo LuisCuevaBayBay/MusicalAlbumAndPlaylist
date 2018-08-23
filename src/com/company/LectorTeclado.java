@@ -20,7 +20,7 @@ public class LectorTeclado {
     }
     String leeerLinea()
     {
-        return scanner.next();
+        return scanner.nextLine();
     }
     public int leerEntero(String mensaje, String reintento){
         System.out.println(mensaje);
