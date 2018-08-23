@@ -1,14 +1,11 @@
 package com.company;
-
-
-
 public class Album {
     private String NombreAlbum;
     private String NombreArtista;
     private int numCanciones;
     private String NombreCancion;
 
-    public Album(String NombreAlbum, String NombreArtista,String NombreCancion){
+    public Album(String NombreAlbum, String NombreArtista, String NombreCancion){
         this.NombreAlbum = NombreAlbum;
         this.NombreArtista = NombreArtista;
         this.numCanciones = numCanciones;

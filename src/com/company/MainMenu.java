@@ -14,9 +14,8 @@ public class MainMenu {
 
         int opcion = 0;
         while ((opcion<1)|| (opcion>4)){
-            System.out.println("Favor ingresa una opcion");
             Scanner sc = new Scanner(System.in);
-            opcion = lt.LecturaEntero();
+            opcion = lt.leerEntero("Favor ingresa una opcion","intenta de nuevo");
             if((opcion<1)||(opcion>4)){
                 System.out.println("Opcion no valida");
             }

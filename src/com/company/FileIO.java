@@ -1,6 +1,5 @@
 package com.company;
 
-import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -14,15 +13,6 @@ public class FileIO {
         FileReader fr = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fr);
         AlbumDynArray album = new AlbumDynArray() {
-            @Override
-            public void add(Object data) {
-
-            }
-
-            @Override
-            public Object getItem(int index) {
-                return null;
-            }
         };
         String line = null;
         while ((line = br.readLine())!= null){
@@ -30,11 +20,12 @@ public class FileIO {
             String name = st.nextToken();
             String artistname = st.nextToken();
             String songname = st.nextToken();
-            Album album1 = new Album(name,artistname,songname);
-            album.add(album);
+            Album album1;
+            album1 = new Album(name,artistname,songname);
+            album.add(album1);
         }
         br.close();
-        return (list<Album>) album;
+        return album;
     }
     public void writeProducts(list<Album> album)throws IOException{
         FileWriter fw = new FileWriter(fileName);

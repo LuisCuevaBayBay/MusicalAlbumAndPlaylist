@@ -3,24 +3,44 @@ package com.company;
 import java.util.Scanner;
 
 public class LectorTeclado {
-    public String LeerCadena(){
-        Scanner in = new Scanner(System.in);
-        return in.nextLine();
-    }
+    private Scanner scanner;
+    private static LectorTeclado instance;
 
-    public Double LecturaDecimal(){
-        Scanner in = new Scanner(System.in);
-        return in.nextDouble();
+    public LectorTeclado(){
+        scanner = new Scanner(System.in);
     }
-
-    public int LecturaEntero(){
-        Scanner in = new Scanner(System.in);
-        return in.nextInt();
+    public static LectorTeclado getInstance(){
+        if (instance == null){
+            instance = new LectorTeclado();
+        }
+        return instance;
     }
-
-    public char LecturaChar(){
-        Scanner in = new Scanner(System.in);
-        return in.next().charAt(0);
+    String leerPalabra() {
+        return scanner.next();
+    }
+    String leeerLinea()
+    {
+        return scanner.next();
+    }
+    public int leerEntero(String mensaje, String reintento){
+        System.out.println(mensaje);
+        do {
+            if (scanner.hasNextInt()){
+                return scanner.nextInt();
+            }
+            scanner.next();
+            System.out.println(reintento);
+        }while (true);
+    }
+    public double leerFlotante (String mensaje, String reintento){
+        System.out.println(mensaje);
+        do {
+            if(scanner.hasNextDouble()){
+                return scanner.nextDouble();
+            }
+            scanner.next();
+            System.out.println(reintento);
+        }while (true);
     }
 
 }
